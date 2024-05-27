@@ -7,7 +7,7 @@ Este proyecto implementa un pipeline de MLOps para gestionar y automatizar el fl
 
 ## Pipeline de CI/CD
 
-A continuación se muestra un diagrama más específico del pipeline de CI/CD utilizado.
+A continuación se muestra un diagrama más específico del pipeline de CI/CD utilizado en el repositorio del modelo y del microservicio.
 
 ![Diagrama de CI/CD](docs/diagrama_cicd.png)
 
