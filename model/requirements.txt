@@ -1,0 +1,13 @@
+scikit-learn==1.1.2
+lightgbm
+pandas
+pydantic
+joblib
+PyYAML==5.4.1
+typing
+google-cloud
+google-cloud-storage
+google-cloud-bigquery
+pytest==6.2.4
+wheel
+db-dtypes

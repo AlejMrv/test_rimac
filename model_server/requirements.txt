@@ -1,0 +1,11 @@
+google-cloud
+google-cloud-storage
+blob
+gunicorn==20.1.0
+flask==2.3.2
+pandas
+#joblib
+scikit-learn==1.1.2
+lightgbm
+pytest==6.2.4
+wheel

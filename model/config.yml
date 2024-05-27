@@ -1,0 +1,59 @@
+# Datasets parameters
+app_config:
+  data_raw: heart.csv
+  data_train: train.csv
+  data_test: test.csv
+  model_fitted_name: lightgbm_model
+
+# Test performance parameters
+performance_config:
+  threshold_precision: 0.6
+  threshold_recall: 0.5
+  threshold_f1: 0.5
+
+# Cloud parameters
+cloud_config:
+  project_id: ultra-solution-424503-b2
+  bucket_name: mlops-model-testing
+  bucket_file_name: heart.csv
+  bucket_train_file_name: heart_train.csv
+  bucket_test_file_name: heart_test.csv
+  bigquery_dataset: heart_disease_data
+  bigquery_dataset_table: patient_health_info
+  bigquery_dataset_train_table: patient_health_train_info
+  bigquery_dataset_test_table: patient_health_test_info
+  bucket_model_name: lightgbm_model
+
+# Model parameters
+model_config:
+  target: HeartDisease
+  test_size: 0.3
+  random_state: 23
+  version_model: 1.0
+  features:
+    - Age
+    - Sex
+    - ChestPainType
+    - RestingBP
+    - Cholesterol
+    - FastingBS
+    - RestingECG
+    - MaxHR
+    - ExerciseAngina
+    - Oldpeak
+    - ST_Slope
+
+  numerical_features:
+    - Age
+    - RestingBP
+    - Cholesterol
+    - FastingBS
+    - MaxHR
+    - Oldpeak
+
+  categorical_features:
+    - Sex
+    - ChestPainType
+    - RestingECG
+    - ExerciseAngina
+    - ST_Slope

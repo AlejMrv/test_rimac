@@ -1,0 +1,11 @@
+*.json
+pytest_cache*
+__pycache__*
+.pytest_cache*
+report.xml*
+**/*.json
+gcp_credential.json*
+estructura.txt*
+venv*
+model/experiments/
+ipynb*
