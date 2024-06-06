@@ -5,7 +5,7 @@ import os
 
 #project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 #PATH_CREDENTIALS = os.path.join('gcp_credential.json')
-credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+PATH_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = PATH_CREDENTIALS
 
 storage_client = storage.Client()
