@@ -1,8 +1,6 @@
 from google.cloud import storage
 import os
 
-current_directory = os.getcwd()
-print("Directorio actual:", current_directory)
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 #script_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
