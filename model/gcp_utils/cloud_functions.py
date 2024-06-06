@@ -2,16 +2,17 @@ from google.cloud import storage, bigquery
 from google.api_core.exceptions import NotFound, Conflict
 import os
 
-
+current_directory = os.getcwd()
+print("Directorio actual:", current_directory)
 #project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-#PATH_CREDENTIALS = os.path.join('gcp_credential.json')
-PATH_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = '/gcp_credential.json'
+PATH_CREDENTIALS = os.path.join('gcp_credential.json')
+#PATH_CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = PATH_CREDENTIALS
 
 #storage_client = storage.Client()
 
 
-storage_client = storage.Client(credentials=credentials)
+storage_client = storage.Client()
 
 def create_bucket(bucket_name, storage_class='STANDARD', location='us-central1'): 
 
