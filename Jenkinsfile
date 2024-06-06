@@ -5,8 +5,8 @@ pipeline {
             steps {
                 script {
                     // Variables para detectar cambios
-                    env.MICROSERVICE_CHANGED = 'false'
-                    env.MODEL_TRAINING_CHANGED = 'true'
+                    env.MICROSERVICE_CHANGED = 'true'
+                    env.MODEL_TRAINING_CHANGED = 'false'
 
                     // Obtener la lista de archivos modificados utilizando git
                     def changes = sh(script: "git diff --name-only HEAD~1 HEAD", returnStdout: true).trim().split("\n")
@@ -14,10 +14,10 @@ pipeline {
                     // Verificar si se han realizado cambios en modelsserver o model
                     changes.each { change ->
                         if (change.startsWith('model_server/') || change.startsWith('Jenkins')) {
-                            env.MICROSERVICE_CHANGED = 'false'
+                            env.MICROSERVICE_CHANGED = 'true'
                         }
                         if (change.startsWith('model/') || change.startsWith('Jenkins'))  {
-                            env.MODEL_TRAINING_CHANGED = 'true'
+                            env.MODEL_TRAINING_CHANGED = 'false'
                         }
                     }
                 }
