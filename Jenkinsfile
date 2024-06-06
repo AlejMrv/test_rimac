@@ -74,6 +74,7 @@ def buildMicroservice() {
 def trainModel() {
     dir('model') {
         // Procesamiento y fit del modelo
+
         sh 'chmod +x ./setup_model.sh'
         sh './setup_model.sh'
     }
