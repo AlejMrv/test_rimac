@@ -2,7 +2,7 @@ from google.cloud import storage
 import os
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
-script_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+#script_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 path_credentials = os.path.join(script_dir, 'gcp_credential.json')
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = path_credentials
 
