@@ -17,7 +17,7 @@ pipeline {
                             env.MICROSERVICE_CHANGED = 'false'
                         }
                         if (change.startsWith('model/') || change.startsWith('Jenkins'))  {
-                            env.MODEL_TRAINING_CHANGED = 'false'
+                            env.MODEL_TRAINING_CHANGED = 'true'
                         }
                     }
                 }
