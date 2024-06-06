@@ -8,7 +8,7 @@ echo 'Upgrade pip ...'
 echo 'Instalando dependencias ...'
 ./venv/bin/pip install -r requirements.txt
 
-export GOOGLE_APPLICATION_CREDENTIALS="$(pwd)/gcp_credential.json"
+#export GOOGLE_APPLICATION_CREDENTIALS="$(pwd)/gcp_credential.json"
 
 echo 'Procesando dataset ...'
 ./venv/bin/python3 scr/processing_pipeline.py
